@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+      body {
+        min-width: 357px;
+        overflow-x: hidden;
+      }
+
+      img {
+        margin: 5px;
+        border: 2px solid black;
+        vertical-align: middle;
+        width: 75px;
+        height: 75px;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
+      -->
+      <link rel="stylesheet" href="bootstrap.min.css">
+
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+      <script src="jquery-2.1.1.min.js" />
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="bootstrap.min.js"></script>
+      <script src="popup.js"></script>
+  </head>
+  <body>
+	  <div class="container">
+	 <p id='plugin_error_message_label' class='bg-danger center-block'></p>
+	 <p id='plugin_success_message_label' class='bg-success center-block'></p>
+	 <form id="mainForm" role="form">
+  <div class="form-group">
+    <label for="plugin_user_id_input">User Id</label>
+    <input type="text" class="form-control" id="plugin_user_id_input" placeholder="Enter UserId">
+    <br/><div id="plugin_select_role_area"></div>
+  </div>
+  <button id="plugin_fetch_user_button" class="btn btn-primary" >Fetch</button>
+  <button id="plugin_create_user_button" class="btn btn-success">Create</button>
+  <button id="plugin_save_user_button" class="btn btn-success">Save</button>
+  <button id="plugin_cancel_user_button" class="btn btn-default">Cancel</button>
+</form>
+<br />
+<div id='plugin_response_area'></div>
+</div>  
+</body>
+</html>
+
